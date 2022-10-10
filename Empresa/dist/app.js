@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var caminhao_1 = require("./caminhao");
+var moto_1 = require("./moto");
+var caminhoneiro = new caminhao_1.Caminhao('amarelo', 'Mercedes-Benz', 'Axor');
+var motoTaxi = new moto_1.Moto('branca', 'Honda', 'PCX');
+console.log("O caminh\u00E3o ".concat(caminhoneiro.modelo, " \u00E9 o mais atual do mercado, \u00E9 produzido pela empresa ").concat(caminhoneiro.fabricante, ". A cor escolhida pelo caminhoneiro foi ").concat(caminhoneiro.cor, ", como sua especialidade \u00E9 em transporte de materiais agriculas, decidiu comprar uma ca\u00E7amba de ").concat(caminhoneiro.tamanhoCacamba));
+console.log("O motoTaxi da favela juntou uma grana das corridas e comprou uma moto ".concat(motoTaxi.fabricante, " do modelo ").concat(motoTaxi.modelo, ", de cor ").concat(motoTaxi.cor, "! Esse era seu sonho."));
+caminhoneiro.acelerar();
+motoTaxi.parar();
+caminhoneiro.descarregar();
+motoTaxi.empinar();
