@@ -1,18 +1,23 @@
 <!--Menu-->
 <nav class="navbar navbar-expand-lg navbar-light bg-danger">
-    <a class="navbar-brand" [routerLink]="['/']">Filmes HD</a>
+    <a class="navbar-brand" [routerLink]="['/']">
+      <img src="../../assets/images/assistir-filme.png" width="30" height="30" class="d-inline-block align-top">
+      Filmes HD </a>
+
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <a class="nav-link" href="categoria.html">Categoria <span class="sr-only">(current)</span>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['categoria']">Categoria <span class="sr-only">(current)</span>
             </a>
-          
+          </li>
       
         <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/sobre']">Sobre nós <span class="sr-only">(current)</span></a>
+          <a class="nav-link" [routerLink]="['sobre']">Sobre nós <span class="sr-only">(current)</span></a>
         </li>
     </ul>
     </div>
