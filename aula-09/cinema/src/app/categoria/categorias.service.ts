@@ -1,18 +1,17 @@
 import { Categoria } from "./categoria2/categoria2.model";
+import { CINEMA_API} from "../app.api";
+import { Injectable } from "@angular/core";
+import { HttpClient } from '@angular/common/http';
+import { catchError, Observable } from "rxjs";
+import { ErrorHandler } from "../app.error-handler";
 
+@Injectable()
 export class CategoriasService {
-    categorias: Categoria[] = [
-    {id: 1, titulo: 'Terror', imagePath: '../../assets/images/filme-de-terror.png'},
-    {id: 2, titulo: 'Ação', imagePath: '../../assets/images/spy.png'},
-    {id: 3, titulo: 'Comédia', imagePath: '../../assets/images/comedia.png'},
-    {id: 4, titulo: 'Romance', imagePath: '../../assets/images/passaros-do-amor.png'}
-    ];
+    categorias: Categoria[] = [];
 
+    constructor(private http: HttpClient){}
 
-    constructor(){}
-
-    listarCategorias(){
-        return this.categorias;
-
+    listarCategorias(): Observable<Categoria[]>{
+        return this.http.get<Categoria[]>(`${CINEMA_API}/categorias`) .pipe(catchError(ErrorHandler.handlerError));
     }
 }

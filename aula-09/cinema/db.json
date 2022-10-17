@@ -1,0 +1,24 @@
+{
+    "categorias": [
+        {
+            "id": 1,
+            "titulo": "Terror",
+            "imagePath": "../../assets/images/filme-de-terror.png"
+        },
+        {
+            "id": 2,
+            "titulo": "Ação",
+            "imagePath": "../../assets/images/spy.png"
+        },
+        {
+            "id": 3,
+            "titulo": "Comédia",
+            "imagePath": "../../assets/images/comedia.png"
+        },
+        {
+            "id": 5,
+            "titulo": "Romance",
+            "imagePath": "../../assets/images/passaros-do-amor.png" 
+        }
+    ]
+}
